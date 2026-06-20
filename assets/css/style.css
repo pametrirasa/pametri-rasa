@@ -290,3 +290,36 @@ footer{
         margin-top:10px;
     }
 }
+
+/* KATEGORI */
+
+.kategori-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.btn-mini{
+    display:inline-block;
+    margin-top:15px;
+
+    color:var(--army);
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.btn-mini:hover{
+    color:var(--army-dark);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.kategori-grid{
+    grid-template-columns:1fr;
+}
+
+}
