@@ -375,4 +375,6 @@ footer{
 
 .article-content{
     text-align:justify;
+    line-height:2;
+    font-size:18px;
 }
