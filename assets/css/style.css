@@ -1,3 +1,16 @@
+/* ===== PAMETRI RASA ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+    --army:#556B2F;
+    --army-dark:#3f4f21;
+    --cream:#f8f6f2;
+    --brown:#4b3621;
+    --text:#333333;
+    --white:#ffffff;
+}
+
 *{
     margin:0;
     padding:0;
@@ -5,83 +18,156 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#FAF9F6;
-    color:#333;
-    line-height:1.7;
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.8;
 }
 
+/* HEADER */
+
 header{
-    background:#556B2F;
-    color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:50px 20px;
+    background:var(--white);
+    border-bottom:1px solid #e5e5e5;
 }
 
 header h1{
+    font-family:'Cormorant Garamond',serif;
     font-size:3rem;
+    color:var(--army);
 }
 
 header p{
+    font-style:italic;
+    color:#777;
     margin-top:10px;
 }
 
+/* MENU */
+
 nav{
-    background:white;
-    padding:15px;
+    background:var(--white);
     text-align:center;
-    border-bottom:1px solid #ddd;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid #e5e5e5;
 }
 
 nav a{
     text-decoration:none;
-    color:#333;
-    margin:0 10px;
-    font-weight:bold;
+    color:var(--brown);
+    margin:0 15px;
+    font-weight:500;
 }
+
+nav a:hover{
+    color:var(--army);
+}
+
+/* HERO */
 
 .hero{
     max-width:900px;
-    margin:60px auto;
-    text-align:center;
-    padding:20px;
+    margin:auto;
+    padding:80px 30px;
 }
 
 .hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
     margin-bottom:20px;
+    color:var(--brown);
 }
 
 .hero p{
-    margin-bottom:25px;
+    margin-bottom:20px;
+    font-size:1.1rem;
 }
 
-.btn{
-    display:inline-block;
-    background:#556B2F;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:6px;
-}
+/* CONTENT */
 
 .section{
     max-width:1000px;
     margin:auto;
-    padding:20px;
+    padding:40px 20px 80px;
 }
+
+.section h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.2rem;
+    margin-bottom:25px;
+    color:var(--brown);
+}
+
+/* CARD */
 
 .card{
     background:white;
-    padding:20px;
-    margin-bottom:15px;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-footer{
-    background:#556B2F;
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:var(--army);
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    background:var(--army);
     color:white;
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    margin-top:15px;
+}
+
+.btn:hover{
+    background:var(--army-dark);
+}
+
+/* FOOTER */
+
+footer{
+    background:white;
     text-align:center;
-    padding:25px;
-    margin-top:50px;
+    padding:30px;
+    margin-top:60px;
+    border-top:1px solid #e5e5e5;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2.2rem;
+}
+
+.hero h2{
+    font-size:2rem;
+}
+
+nav a{
+    display:block;
+    margin:10px 0;
+}
+
 }
