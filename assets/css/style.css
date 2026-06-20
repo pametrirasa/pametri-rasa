@@ -201,3 +201,58 @@ nav a{
     color:white;
 }
 }
+/* HERO BARU */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+
+    max-width:1200px;
+    margin:auto;
+
+    padding:80px 20px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.label{
+    display:inline-block;
+
+    font-size:12px;
+    letter-spacing:2px;
+
+    color:#6b7c52;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero h3{
+    font-weight:400;
+    font-style:italic;
+    color:#777;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
