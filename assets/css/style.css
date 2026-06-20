@@ -7,7 +7,7 @@
     --army-dark:#3f4f21;
     --cream:#f8f6f2;
     --brown:#4b3621;
-    --text:#333333;
+    --text:#333;
     --white:#ffffff;
 }
 
@@ -24,7 +24,7 @@ body{
     line-height:1.8;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
     text-align:center;
@@ -35,26 +35,26 @@ header{
 
 header h1{
     font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
+    font-size:3.5rem;
     color:var(--army);
 }
 
 header p{
-    font-style:italic;
-    color:#777;
     margin-top:10px;
+    color:#777;
+    font-style:italic;
 }
 
-/* MENU */
+/* ================= MENU ================= */
 
 nav{
-    background:var(--white);
+    background:white;
     text-align:center;
     padding:18px;
+    border-bottom:1px solid #e5e5e5;
     position:sticky;
     top:0;
-    z-index:100;
-    border-bottom:1px solid #e5e5e5;
+    z-index:1000;
 }
 
 nav a{
@@ -62,54 +62,128 @@ nav a{
     color:var(--brown);
     margin:0 15px;
     font-weight:500;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:var(--army);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-    max-width:900px;
+    max-width:1200px;
     margin:auto;
-    padding:80px 30px;
+    padding:80px 20px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+}
+
+.hero-text{
+    z-index:2;
+}
+
+.label{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--army);
+    font-weight:600;
+    margin-bottom:15px;
 }
 
 .hero h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
-    margin-bottom:20px;
+    font-size:4rem;
     color:var(--brown);
+    margin-bottom:10px;
+}
+
+.hero h3{
+    font-size:1.8rem;
+    font-style:italic;
+    font-weight:400;
+    color:#777;
+    margin-bottom:25px;
 }
 
 .hero p{
-    margin-bottom:20px;
-    font-size:1.1rem;
+    font-size:1.15rem;
+    margin-bottom:30px;
 }
 
-/* CONTENT */
+/* ================= BUTTON ================= */
+
+.btn{
+    display:inline-block;
+    background:var(--army);
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:var(--army-dark);
+}
+
+.btn-outline{
+    display:inline-block;
+    margin-left:10px;
+    padding:12px 24px;
+    border:2px solid var(--army);
+    color:var(--army);
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+.btn-outline:hover{
+    background:var(--army);
+    color:white;
+}
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= CONTENT ================= */
 
 .section{
-    max-width:1000px;
+    max-width:1200px;
     margin:auto;
-    padding:40px 20px 80px;
+    padding:60px 20px;
 }
 
 .section h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:2.2rem;
-    margin-bottom:25px;
+    font-size:3rem;
     color:var(--brown);
+    margin-bottom:30px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 
 .card{
     background:white;
     padding:30px;
     margin-bottom:25px;
-    border-radius:15px;
+    border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
     transition:0.3s;
 }
@@ -127,132 +201,66 @@ nav a:hover{
     color:#555;
 }
 
-/* BUTTON */
-
-.btn{
-    display:inline-block;
-    background:var(--army);
-    color:white;
-    padding:12px 24px;
-    border-radius:30px;
-    text-decoration:none;
-    margin-top:15px;
-}
-
-.btn:hover{
-    background:var(--army-dark);
-}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-    background:white;
     text-align:center;
-    padding:30px;
-    margin-top:60px;
+    padding:40px;
+    background:white;
     border-top:1px solid #e5e5e5;
+    margin-top:50px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:768px){
 
-header h1{
-    font-size:2.2rem;
-}
+    header h1{
+        font-size:2.5rem;
+    }
 
-.hero h2{
-    font-size:2rem;
-}
+    nav{
+        padding:15px;
+    }
 
-nav a{
-    display:block;
-    margin:10px 0;
-}
-.label{
-    color:#556B2F;
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
-}
+    nav a{
+        display:inline-block;
+        margin:8px;
+        font-size:15px;
+    }
 
-.tagline{
-    font-size:1.5rem;
-    font-style:italic;
-    color:#777;
-    margin-bottom:25px;
-}
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+    }
 
-.btn-outline{
-    display:inline-block;
-    padding:12px 24px;
-    margin-left:10px;
-    border:2px solid #556B2F;
-    color:#556B2F;
-    text-decoration:none;
-    border-radius:30px;
-    transition:0.3s;
-}
+    .hero-image{
+        order:-1;
+    }
 
-.btn-outline:hover{
-    background:#556B2F;
-    color:white;
-}
-}
-/* HERO BARU */
+    .hero-image img{
+        height:280px;
+    }
 
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
+    .hero h2{
+        font-size:3rem;
+    }
 
-    max-width:1200px;
-    margin:auto;
+    .hero h3{
+        font-size:1.3rem;
+    }
 
-    padding:80px 20px;
-}
+    .hero p{
+        font-size:1rem;
+    }
 
-.hero-text{
-    flex:1;
-}
+    .section h2{
+        font-size:2.2rem;
+    }
 
-.hero-image{
-    flex:1;
-}
-
-.hero-image img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-.label{
-    display:inline-block;
-
-    font-size:12px;
-    letter-spacing:2px;
-
-    color:#6b7c52;
-    margin-bottom:15px;
-}
-
-.hero h2{
-    font-size:60px;
-    margin-bottom:15px;
-}
-
-.hero h3{
-    font-weight:400;
-    font-style:italic;
-    color:#777;
-    margin-bottom:25px;
-}
-
-.hero p{
-    font-size:20px;
-    line-height:1.8;
-    margin-bottom:30px;
+    .btn-outline{
+        margin-left:0;
+        margin-top:10px;
+    }
 }
